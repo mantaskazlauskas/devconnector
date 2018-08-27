@@ -107,6 +107,15 @@ class CreateProfile extends Component {
             onChange={this.onChange}
             error={errors.facebook}
           />
+
+          <InputGroup
+            placeholder="Instagram Profile URL"
+            name="instagram"
+            icon="fab fa-instagram"
+            value={this.state.instagram}
+            onChange={this.onChange}
+            error={errors.instagram}
+          />
         </div>
       );
     }

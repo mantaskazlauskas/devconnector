@@ -8,6 +8,7 @@ import InputGroup from "../common/InputGroup";
 import SelectListGroup from "../common/SelectListGroup";
 import { createProfile, getCurrentProfile } from "../../actions/profileActions";
 import isEmpty from "../../validation/is-empty";
+import { Link } from "react-router-dom";
 
 class EditProfile extends Component {
   constructor(props) {
@@ -160,6 +161,15 @@ class EditProfile extends Component {
             onChange={this.onChange}
             error={errors.facebook}
           />
+
+          <InputGroup
+            placeholder="Instagram Profile URL"
+            name="instagram"
+            icon="fab fa-instagram"
+            value={this.state.instagram}
+            onChange={this.onChange}
+            error={errors.instagram}
+          />
         </div>
       );
     }
@@ -181,6 +191,9 @@ class EditProfile extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
+              <Link to="/dashboard" className="btn btn-light">
+                Go Back
+              </Link>
               <h1 className="display-4 text-center">Edit Profile</h1>
               <small className="d-block pb-3">*: required fields</small>
 
